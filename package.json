@@ -25,5 +25,9 @@
   },
   "projectConfig": {
     "apiKey": "hieu987"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
   }
 }
