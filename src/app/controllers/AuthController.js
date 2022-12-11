@@ -66,7 +66,12 @@ class ListController {
               } else {
                 Account.findOneAndUpdate(
                   { id: req.body.id },
-                  { $set: { user_token: req.body.user_token } },
+                  {
+                    $set: {
+                      user_token: req.body.user_token,
+                      avatar: req.body.avatar,
+                    },
+                  },
                   { new: true },
                   (err, doc) => {
                     if (err) {
