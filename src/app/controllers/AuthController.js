@@ -103,13 +103,11 @@ class ListController {
                     res.json({
                       isLogin: true,
                       result: {
-                        result: {
-                          id: doc.id,
-                          user_name: doc.user_name,
-                          full_name: doc.created_by,
-                          avatar: doc.avatar,
-                          email: doc.email,
-                        },
+                        id: doc.id,
+                        user_name: doc.user_name,
+                        full_name: doc.created_by,
+                        avatar: doc.avatar,
+                        email: doc.email,
                       },
                     });
                   }
