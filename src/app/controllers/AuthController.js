@@ -56,16 +56,7 @@ class ListController {
                     id: req.body.id,
                   })
                     .then((dataSignUp) => {
-                      res.json({
-                        isSignUp: true,
-                        result: {
-                          id: dataSignUp.id,
-                          user_name: dataSignUp.user_name,
-                          full_name: dataSignUp.created_by,
-                          avatar: dataSignUp.avatar,
-                          email: dataSignUp.email,
-                        },
-                      });
+                      res.json({ isSignUp: true, result: dataSignUp });
                     })
                     .catch((error) => {
                       res.json({ isSignUp: false, result: 'Sign Up failed' });
@@ -109,7 +100,18 @@ class ListController {
                     if (err) {
                       console.log('Something wrong when updating data!');
                     }
-                    res.json({ isLogin: true, result: doc });
+                    res.json({
+                      isLogin: true,
+                      result: {
+                        result: {
+                          id: doc.id,
+                          user_name: doc.user_name,
+                          full_name: doc.created_by,
+                          avatar: doc.avatar,
+                          email: doc.email,
+                        },
+                      },
+                    });
                   }
                 );
               } else {
@@ -217,11 +219,11 @@ class ListController {
             res.json({
               isLogin: true,
               result: {
-                id: dataSignUp.id,
-                user_name: dataSignUp.user_name,
-                full_name: dataSignUp.created_by,
-                avatar: dataSignUp.avatar,
-                email: dataSignUp.email,
+                id: dataAccount.id,
+                user_name: dataAccount.user_name,
+                full_name: dataAccount.created_by,
+                avatar: dataAccount.avatar,
+                email: dataAccount.email,
               },
             });
           })
