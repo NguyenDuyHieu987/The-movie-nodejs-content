@@ -56,7 +56,16 @@ class ListController {
                     id: req.body.id,
                   })
                     .then((dataSignUp) => {
-                      res.json({ isSignUp: true, result: dataSignUp });
+                      res.json({
+                        isSignUp: true,
+                        result: {
+                          id: dataSignUp.id,
+                          user_name: dataSignUp.user_name,
+                          full_name: dataSignUp.created_by,
+                          avatar: dataSignUp.avatar,
+                          email: dataSignUp.email,
+                        },
+                      });
                     })
                     .catch((error) => {
                       res.json({ isSignUp: false, result: 'Sign Up failed' });
@@ -205,7 +214,16 @@ class ListController {
           user_token: req.body.user_token,
         })
           .then((dataAccount) => {
-            res.json({ isLogin: true, result: dataAccount });
+            res.json({
+              isLogin: true,
+              result: {
+                id: dataSignUp.id,
+                user_name: dataSignUp.user_name,
+                full_name: dataSignUp.created_by,
+                avatar: dataSignUp.avatar,
+                email: dataSignUp.email,
+              },
+            });
           })
           .catch((error) => {
             res.json({ isLogin: false, result: 'Invalid token' });
