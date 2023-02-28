@@ -108,6 +108,7 @@ class ListController {
                         full_name: doc.created_by,
                         avatar: doc.avatar,
                         email: doc.email,
+                        user_token: doc.user_token,
                       },
                     });
                   }
@@ -222,6 +223,7 @@ class ListController {
                 full_name: dataAccount.created_by,
                 avatar: dataAccount.avatar,
                 email: dataAccount.email,
+                user_token: dataAccount.user_token,
               },
             });
           })
