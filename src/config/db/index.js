@@ -6,7 +6,7 @@ async function connect() {
     //   'mongodb+srv://admin:hieusen123@cluster0.h6ko2rq.mongodb.net/movie_web_dev?retryWrites=true&w=majority';
 
     const URL =
-      'mongodb+srv://admin:hieusen123@the-movie-database.fczrzon.mongodb.net/test';
+      'mongodb+srv://admin:hieusen123@the-movie-database.fczrzon.mongodb.net/Phimhay247_DB';
     // const URL = 'mongodb://localhost:27017/movie_web_dev';
 
     await mongoose.connect(URL, {
