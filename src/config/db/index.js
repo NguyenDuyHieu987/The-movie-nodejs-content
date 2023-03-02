@@ -2,11 +2,12 @@ const mongoose = require('mongoose');
 
 async function connect() {
   try {
-    // const URL =
-    //   'mongodb+srv://admin:hieusen123@cluster0.h6ko2rq.mongodb.net/movie_web_dev?retryWrites=true&w=majority';
-
     const URL =
-      'mongodb+srv://admin:hieusen123@the-movie-database.fczrzon.mongodb.net/Phimhay247_DB';
+      'mongodb+srv://admin:hieusen123@cluster0.h6ko2rq.mongodb.net/movie_web_dev?retryWrites=true&w=majority';
+
+    // const URL =
+    //   'mongodb+srv://admin:hieusen123@the-movie-database.fczrzon.mongodb.net/Phimhay247_DB?retryWrites=true&w=majority';
+
     // const URL = 'mongodb://localhost:27017/movie_web_dev';
 
     await mongoose.connect(URL, {
